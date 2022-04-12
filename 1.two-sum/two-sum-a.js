@@ -7,3 +7,5 @@ const twoSum = function(nums, target) {
         comp[target-nums[i]] = i
     }
 };
+
+console.log(twoSum([3,2,4], 6))//[1,2]

@@ -12,5 +12,5 @@ var twoSum = function(nums, target) {
     }
     
 }
-console.log("hi")
+console.log("hello")
 console.log(twoSum([3,2,4], 6))//[1,2]

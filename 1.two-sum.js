@@ -24,6 +24,6 @@ var twoSum = function(nums, target) {
     
 };
 
-console.log("hello")
+console.log(twoSum([1,2,3], 3))//[1,2]
 // @lc code=end
 

@@ -10,18 +10,25 @@
  * @return {number}
  */
 var maxSubArray = function(nums) {
-    //declare a variable max assigned to the sum of the entire array nums
-    //declare a variable subarray assigned to the array nums
-    //declare a variable comparison
-
-    //declare a function compare with two parameters, max and comparison
-        //if comparison is bigger than max then max will be assigned comparison
-
-    //create function called comparisonGenerator with 1 parameter, the num array 
-        //base case: if array length is 0 then return subarray
-        //make comparison assigned to the sum of the array from the 1st element to the end
-        //invoke the function compare to see which sum is bigger and assign the larger subarray to the max
-    
+    //declare const max sub array and assign it to the first element
+    const max = [nums[0]]; //[-2]
+    //declare the sum of the maxSubArray using reduce
+    let sum = nums[0]; //-2
+    //iterate and compare over elements
+    for(let i = 1; i<nums.length; i++){
+    //if the 2nd/next element larger than the sum of the maxSubArray then assign it as the max
+    //else if the 2nd/next element plus the max sub array sum is higher then assign the 2nd/next element plus the maxSubArray to be the m
+    if(nums[i] > sum){//if 1>-2
+        max = [nums[i]];
+        sum = nums[i];
+        console.log("max: ", max)
+        console.log("sum: ", sum)
+    } else if (sum + nums[i] > nums[i]){
+        max = max.push(nums[i]);
+        sum = sum+nums[i];
+    }
+}
+ return sum;
 };
 // @lc code=end
 

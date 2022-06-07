@@ -25,15 +25,13 @@
     //if target is less than nums[pivot] make right = pivot -1
         right = pivot-1;//right = 2, 
       
-    }else if(target>nums[pivot]){
+    }else(target>nums[pivot]){
         left = pivot+1;
       
     //if target is more than nums[pivot] make left = pivot +1
-    } else{
-        return -1
-    }
+    } 
     }  
- return -1
+ return left //or right
 };
 // @lc code=end
 
